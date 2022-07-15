@@ -1,0 +1,521 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* (intro and email sign up background) */
+  --intro-and-email-blue: hsl(217, 28%, 15%);
+
+  /* (main background) */
+  --main-bg-blue: hsl(218, 28%, 13%);
+
+  /* (footer background) */
+  --footer-blue: hsl(216, 53%, 9%);
+
+  /* (testimonials background) */
+  --testimonial-blue: hsl(219, 30%, 18%);
+
+  /* (inside call-to-action gradient) */
+  --cyan: hsl(176, 68%, 64%);
+  /* (inside call-to-action gradient) */
+  --blue: hsl(198, 60%, 50%);
+
+  /* (error) */
+  --light-red: hsl(0, 100%, 63%);
+
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  min-width: 638px;
+  max-width: 1440px;
+  margin-inline: auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: var(--white);
+  background-color: var(--main-bg-blue);
+}
+
+/**************** HEADER/NAV SECTION ****************/
+header {
+  background-color: var(--intro-and-email-blue);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-list li {
+  margin-right: 5rem;
+}
+
+.nav-list a {
+  font-family: "Raleway", sans-serif;
+  color: var(--white);
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+/**************** HERO SECTION ****************/
+.hero-section {
+  text-align: center;
+  background-color: var(--intro-and-email-blue);
+}
+
+.hero-section h1 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+}
+.hero-section h1 span {
+  display: block;
+}
+
+.hero-section p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  width: 45%;
+  margin-inline: auto;
+}
+
+.intro-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--blue);
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 1rem 7rem;
+  border-radius: 100px;
+  transition-duration: 250ms;
+}
+
+.intro-btn:hover {
+  background-color: skyblue;
+  transition-duration: 250ms;
+}
+
+/**************** SERVICES SECTION ****************/
+.services-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  row-gap: 50px;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.service {
+  width: 55%;
+}
+
+.service h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.service p {
+  line-height: 1.5;
+}
+
+/**************** PRODUCTIVE SECTION ****************/
+.productive-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 5rem;
+}
+
+.productive-section h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.productive-section h1 span {
+  display: block;
+}
+
+.productive-section p {
+  margin-bottom: 1rem;
+  width: 70%;
+}
+
+.productive-section a {
+  color: var(--cyan);
+  text-decoration: none;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--cyan);
+}
+
+.how-fylo-works {
+  transition-duration: 250ms;
+}
+
+.how-fylo-works:hover {
+  filter: grayscale(100%);
+  transition-duration: 250ms;
+}
+
+.arrow {
+  margin-bottom: -0.3rem;
+}
+
+/**************** TESTIMONIAL SECTION ****************/
+.testimonial-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  padding: 2rem 1rem 1rem 1rem;
+  background-image: url("./images/bg-quotes.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  margin-bottom: 5rem;
+}
+
+.testimonial-section img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+.testimonial {
+  background-color: var(--testimonial-blue);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-shadow: 15px 15px 0px 0px hsl(219, 30%, 15%),
+    0px 15px 0px 0px hsl(219, 30%, 15%);
+}
+
+.testimonial-quote {
+  width: 65%;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.profile {
+  width: 65%;
+  margin-inline: auto;
+}
+.profile-description {
+  display: inline-block;
+}
+
+.profile-name {
+  font-size: 0.9rem;
+}
+
+.profile-occupation {
+  font-size: 0.7rem;
+}
+
+/**************** EARLY ACCESS SECTION ****************/
+
+#form {
+  position: relative;
+  background-color: var(--testimonial-blue);
+  border-radius: 10px;
+  padding-bottom: 1rem;
+  text-align: center;
+  width: 70%;
+  margin-inline: auto;
+  top: 100px;
+}
+
+#form h2 {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+#form p {
+  margin-inline: auto;
+  line-height: 1.5;
+  padding-bottom: 1.5rem;
+  width: 65%;
+}
+
+#form .inputBox {
+  position: relative;
+}
+
+#form #email {
+  width: 300px;
+  background: var(--white);
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  font-style: 18px;
+}
+
+.email-btn {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 700;
+  background-color: var(--cyan);
+  padding: 1rem 3rem;
+  border-radius: 100px;
+  transition-duration: 250ms;
+}
+
+.email-btn:hover {
+  background-color: skyblue;
+  transition-duration: 250ms;
+}
+
+#text {
+  display: block;
+  color: black;
+  font-weight: 300;
+  font-style: italic;
+  padding: 5px;
+}
+
+/**************** END EARLY ACCESS SECTION ****************/
+
+/**************** FOOTER SECTION ****************/
+footer {
+  background-color: var(--footer-blue);
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  font-weight: 700;
+}
+
+.first-footer-group {
+  width: 25%;
+}
+
+.footer-logo {
+  margin-bottom: 1rem;
+}
+
+.location-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.location-icon {
+  margin-right: 1rem;
+  margin-top: 0.3rem;
+}
+
+.location-container p {
+  line-height: 1.5;
+}
+
+.contact-info-1 {
+  margin-bottom: 1rem;
+}
+
+.contact-info-1 span,
+.contact-info-2 span {
+  margin-left: 1rem;
+}
+
+.group-link-1,
+.group-link-2 {
+  list-style-type: none;
+}
+
+.group-link-1 li,
+.group-link-2 li {
+  margin-bottom: 1rem;
+}
+
+.footer-icons > * {
+  margin-right: 1rem;
+  transition-duration: 250ms;
+}
+
+.footer-icons > *:hover {
+  cursor: pointer;
+  color: var(--cyan);
+  transition-duration: 250ms;
+}
+
+/**************** END FOOTER SECTION ****************/
+
+/**************** MEDIA QUERY SECTION ****************/
+@media screen and (max-width: 814px) {
+  nav {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+  }
+
+  nav img {
+    width: 120px;
+  }
+
+  .hero-section img {
+    width: 500px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+    width: 70%;
+  }
+  .intro-btn {
+    font-size: 1rem;
+  }
+
+  .services-section {
+    grid-template-columns: 1fr;
+  }
+
+  .productive-section {
+    grid-template-columns: 1fr;
+  }
+
+  .productive-main-img {
+    width: 500px;
+  }
+
+  .productive-description {
+    text-align: center;
+  }
+
+  .productive-section h1 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .productive-section h1 span {
+    display: inline;
+  }
+
+  .productive-section p {
+    width: 60%;
+    margin-inline: auto;
+    font-size: 1rem;
+  }
+
+  .testimonial-section {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+    padding: 3rem;
+    background-position: 50px 10px;
+  }
+
+  #form {
+    padding-bottom: 2rem;
+  }
+
+  #form .inputBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #text {
+    order: 2;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  #email {
+    order: 1;
+  }
+
+  .email-btn {
+    order: 3;
+    margin-left: 0;
+    padding: 1rem 5rem;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 12rem;
+    padding-bottom: 5rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  footer > * {
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  .first-footer-group {
+    width: 100%;
+  }
+
+  .group-link-1 {
+    margin-top: 3rem;
+  }
+
+  .footer-icons {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 638px) {
+  nav img {
+    width: 100px;
+  }
+
+  .nav-list a {
+    font-size: 1rem;
+  }
+
+  .hero-section img {
+    width: 300px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+/**************** END MEDIA QUERY SECTION ****************/
